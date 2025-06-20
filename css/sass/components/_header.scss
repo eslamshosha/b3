@@ -113,7 +113,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 200;
-  background-color: var(--white-color);
+  background-color: #f9f9f9;
   transition: all 0.3s ease-in-out;
 }
 // .fixed-nav .header-cont {
@@ -128,8 +128,9 @@ header {
 // .fixed-header .header-cont {
 //   top: 0;
 // }
-nav {
+header nav {
   box-shadow: 0px 4px 8px 0px #bbbbbb1f;
+  background-color: $white;
 }
 
 .top-header a {
@@ -324,7 +325,6 @@ html[dir="rtl"] .add-to .dropdown-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $white;
   padding: 12px 0;
 }
 .header-welcome {
