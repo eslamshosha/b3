@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   ///////// ** main** /////////
   var mainSlider = new Swiper(".main-slider .swiper-container", {
@@ -28,6 +27,32 @@ $(document).ready(function () {
     },
   });
   ///////// **brands-section** /////////
+  var categorySlider = new Swiper(".category-section .swiper-container", {
+    autoplay: true,
+    pagination: {
+      el: ".category-slider .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".category-slider .swiper-btn-next",
+      prevEl: ".category-slider .swiper-btn-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 13,
+      },
+      1199: {
+        slidesPerView: 5,
+        spaceBetween: 13,
+      },
+    },
+  });
+  ///////// **brands-section** /////////
   var screen = new Swiper(".brands-section .swiper-container", {
     autoplay: true,
     pagination: {
@@ -52,7 +77,7 @@ $(document).ready(function () {
         spaceBetween: 15,
       },
       1199: {
-        slidesPerView: 6,
+        slidesPerView: 7,
         spaceBetween: 15,
       },
     },
@@ -81,5 +106,28 @@ $(document).ready(function () {
       ? $(".arrow-top").fadeIn(300)
       : $(".arrow-top").fadeOut(300);
   });
+  ////////////** footer transfer into accordion **//////////
 
+  if ($(window).width() <= 767) {
+    $(".nav-foot-header").addClass("footer-accordion");
+    $(".nav-foot").addClass("footer-panel");
+  }
+  $(".footer-accordion").click(function () {
+    var x = $(this).siblings().prop("scrollHeight") + 15 + "px";
+    $(".footer-accordion").not(this).removeClass("active");
+    $(this).toggleClass("active");
+    if ($(this).siblings().css("max-height") == "0px") {
+      $(this).siblings().css("max-height", x);
+      $(this).siblings(".nav-foot").css("padding-top", "15px");
+    } else {
+      $(this).siblings().css("max-height", "0");
+      $(this).siblings(".nav-foot").css("padding-top", "0");
+    }
+
+    $(".footer-accordion").not(this).siblings().css("max-height", "0");
+    $(".footer-accordion")
+      .not(this)
+      .siblings(".nav-foot")
+      .css("padding-top", "0");
+  });
 });
