@@ -166,60 +166,39 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 200px;
-  margin-bottom: 40px;
-  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  padding: 0;
+  list-style-type: none;
+  gap: 8px;
   flex-wrap: wrap;
-  @include max-991 {
-    margin-top: 80px;
-    gap: 10px;
-  }
-  @include max-500 {
-    gap: 10px;
-  }
 }
 .custom-pagention a,
 .custom-pagention span {
   @include flexCenter;
   text-decoration: none;
-  font-size: 22px;
-  font-weight: 700;
-  color: $text;
-  width: 46px;
-  height: 58px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $hover;
+  width: 50px;
+  height: 50px;
   line-height: 40px;
-  background-color: transparent;
-  border: 1px solid transparent;
+  background-color: #d9d9d9;
+  border: none;
   text-decoration: none !important;
   outline: none !important;
-  border-radius: 10px;
+  border-radius: 50%;
   max-width: 100%;
   transition: all 0.3s ease-in-out;
-  &.btn {
-    border-color: $text;
-    color: $text;
-    width: 113px;
-  }
-  @include max-500 {
-    font-size: 18px;
-    width: 36px;
-    height: 48px;
-  }
 }
 
 .custom-pagention a.active {
-  color: $main;
-  border-color: $main;
+  color: $white;
+  background-color: $main;
 }
 .custom-pagention a:hover {
   color: $white;
-  border-color: $main;
-}
-.custom-pagention a i {
-  font-size: 20px;
-}
-html[dir="ltr"] .custom-pagention a i {
-  transform: scaleX(-1);
+  background-color: $main;
 }
 
 .breadcrumb-sec {

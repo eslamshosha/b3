@@ -1,0 +1,312 @@
+.content-section {
+  padding: 20px 0;
+}
+.page-title {
+  font-weight: 400;
+  font-size: 14px;
+  color: #878787;
+  margin-bottom: 20px;
+}
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding-top: 25px;
+  @include max-1200 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include max-991 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+}
+.filters-mobile-btn {
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: var(--main-color);
+  margin-top: 50px;
+  font-size: 20px;
+  display: none;
+}
+.filter-cont .acc-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.filter-title {
+  font-weight: 500;
+  font-size: 14px;
+  color: $main;
+  margin-bottom: 8px;
+}
+.filter-cont .acc-title:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.filter-cont .cat-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  padding: 15px 0;
+  outline: none !important;
+  text-decoration: none !important;
+  box-shadow: none;
+  color: var(--sec-color);
+  font-size: 16px;
+  i {
+    font-size: 14px;
+
+    transition: all 0.3s ease-in-out;
+  }
+}
+html[dir="ltr"] .filter-cont .btn-link i {
+  transform: scaleX(-1);
+}
+.filter-cont .cat-link:hover {
+  color: var(--main-color);
+}
+.filter-cont .card-body {
+  padding: 0;
+}
+@media (max-width: 992px) {
+  .filters-mobile-btn {
+    display: flex;
+  }
+}
+.check-group {
+  margin-bottom: 10px;
+}
+.filter-cont .check-group {
+  padding: 8px 0;
+  margin-bottom: 0;
+}
+.check-label {
+  /* min-width: 25%; */
+  text-align: start;
+  position: relative;
+  font-weight: 300;
+  font-size: 12px;
+  margin-bottom: 0;
+  color: $hover;
+  padding-inline-start: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.radio-group .check-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  max-width: 100%;
+  padding: 0 15px;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+}
+
+.check-label:has(input:checked) {
+  border-color: var(--main-color);
+  color: $main;
+}
+.check-group input[type="checkbox"],
+.check-group input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.check-group .checkmark {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.check-group .custom-checkmark {
+  border-radius: 4px;
+}
+.check-group input[type="checkbox"] ~ .checkmark {
+  border-radius: 4px;
+}
+.check-group:hover input ~ .checkmark {
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.check-group input:checked ~ .checkmark {
+  background-color: var(--main-color);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  visibility: visible;
+}
+.check-group input:checked ~ .checkmark:after {
+  opacity: 1;
+  visibility: visible;
+}
+.check-group input:checked ~ .checkmark {
+  background-color: #fff;
+}
+.check-group input:checked ~ .custom-checkmark {
+  background-color: var(--main-color);
+}
+.check-group .checkmark:after {
+  content: "";
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: var(--main-color);
+}
+.check-group .custom-checkmark:after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 10px;
+  color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.range-silder {
+  position: relative;
+  margin-bottom: 30px;
+}
+#slider-range {
+  position: relative;
+}
+#min,
+#max {
+  position: absolute;
+  width: 50px;
+  padding: 10px;
+  top: 100% !important;
+  text-align: center;
+  border: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: $hover;
+}
+.ui-widget.ui-widget-content {
+  border-radius: 10px;
+  background-color: #e2dcdc;
+  border: none;
+}
+/* .ui-slider .ui-slider-range{
+  background-color: var(--more-color);
+} */
+.ui-slider .ui-slider-handle {
+  border-radius: 50%;
+  background-color: $main;
+  border: none;
+}
+.item-status {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  color: #21bf46;
+}
+@media (max-width: 992px) {
+  .filter-cont {
+    display: flex;
+    flex-direction: row-reverse;
+    position: fixed;
+    top: 75px;
+    inset-inline-start: calc(-100vw + 75px);
+    z-index: 99;
+    transition: 0.5s;
+  }
+  .filter-cont.active {
+    inset-inline-start: 0;
+  }
+  .filter-panel {
+    background-color: #fff;
+    width: calc(100vw - 75px);
+    padding: 20px 30px 20px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 13px 0px rgb(0 0 0 / 10%);
+    margin: 0;
+    max-height: calc(100vh - 95px);
+    overflow-y: auto;
+  }
+}
+.product-imgs-cont .item-status {
+  position: absolute;
+  top: 25px;
+  inset-inline-end: 25px;
+}
+.radio-group .check-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.btn-filter {
+  width: 100%;
+  height: 37px;
+  border-radius: 7px;
+  background-color: $white;
+  padding: 0 18px 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  color: $hover;
+  border: none;
+  outline: none;
+  i {
+    @include tr;
+    font-size: 12px;
+  }
+  &.collapsed {
+    i {
+      transform: rotate(180deg);
+    }
+  }
+}
+.filter-cont .card {
+  background-color: $white;
+  background-clip: border-box;
+  border: none;
+  border-radius: 7px;
+  margin-top: 8px;
+  padding: 10px 20px 22px;
+}
+.collapse-item {
+  margin-bottom: 12px;
+}
+.filter-price {
+  background-color: $white;
+  border-radius: 7px;
+  padding: 12px 18px;
+}
+.price-head {
+  font-weight: 500;
+  font-size: 14px;
+  color: $hover;
+  margin-bottom: 12px;
+}
