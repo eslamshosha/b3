@@ -82,6 +82,41 @@ $(document).ready(function () {
       },
     },
   });
+  ///////// ** gallery thumbs ** /////////
+  var productThumbs = new Swiper(".product-thumbs", {
+    slidesPerView: 4,
+    // loop: true,
+    navigation: {
+      nextEl: ".product-thumbs .swiper-btn-next",
+      prevEl: ".product-thumbs .swiper-btn-prev",
+    },
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      0: {
+        spaceBetween: 10,
+      },
+      767: {
+        spaceBetween: 15,
+      },
+      1199: {
+        spaceBetween: 15,
+      },
+    },
+  });
+  //jump to slide
+  $(".button").click(function () {
+    setTimeout(function () {
+      productImgs.slideTo(4, 10, false);
+    }, 175);
+  });
+  var productImgs = new Swiper(".product-imgs", {
+    spaceBetween: 1,
+    // loop: true,
+    thumbs: {
+      swiper: productThumbs,
+    },
+  });
   //////////** fixed arrow to top**//////////
   $(".arrow-top").click(function () {
     $("html").css("scroll-behavior", "unset");
@@ -129,5 +164,25 @@ $(document).ready(function () {
       .not(this)
       .siblings(".nav-foot")
       .css("padding-top", "0");
+  });
+
+  ///////// **product-qty** /////////
+  $(".qty-plus").on("click", function () {
+    var $parentElm = $(this).parents(".item-qty");
+    var maxVal = parseInt($parentElm.find(".qty-input").attr("data-max"));
+    var value = $parentElm.find(".qty-input").val();
+    if (value < maxVal) {
+      value++;
+    }
+    $parentElm.find(".qty-input").val(value);
+  });
+  $(".qty-minus").on("click", function () {
+    var $parentElm = $(this).parents(".item-qty");
+    var minVal = parseInt($parentElm.find(".qty-input").attr("data-min"));
+    var value = $parentElm.find(".qty-input").val();
+    if (value > minVal) {
+      value--;
+    }
+    $parentElm.find(".qty-input").val(value);
   });
 });
