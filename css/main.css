@@ -2289,4 +2289,219 @@ html[dir=ltr] .rate-more i {
 }
 .rate-more:hover {
   color: var(--main-hover);
+}
+
+.sign-section {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-container {
+  text-align: center;
+  width: 100%;
+  max-width: 496px;
+  margin: 0 auto;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 30px;
+  margin: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .sign-container {
+    padding: 25px 20px;
+  }
+}
+
+.form-cont {
+  text-align: center;
+}
+
+.upper-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.logo-ancor {
+  display: inline-block;
+}
+
+.logo-img {
+  width: 193px;
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+.form-head {
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--main-hover);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-pargh {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--main-hover);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  max-width: 100%;
+}
+.login-form .check-label {
+  font-weight: 400;
+  font-size: 12px;
+}
+.login-form .check-text a {
+  color: var(--main-color);
+}
+
+.form-group {
+  width: 100%;
+  text-align: start;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  background-color: #f9f9f9;
+  border: 2px solid transparent;
+  height: 54px;
+  width: 100%;
+  padding: 0 50px;
+  border-radius: 10px;
+  text-align: start;
+  color: #979797;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 0;
+  transition: all 0.3s ease-in-out;
+  caret-color: var(--main-color);
+}
+
+.form-input::-moz-placeholder {
+  color: #979797;
+}
+
+.form-input::placeholder {
+  color: #979797;
+}
+
+.form-input:focus {
+  border-color: var(--main-color);
+  outline: 0;
+}
+
+.forget-password {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--sec-color);
+  display: inline-block;
+  text-align: center;
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
+}
+.forget-password:hover {
+  color: var(--main-hover);
+}
+
+.form-btn-cont {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.form-btn {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 48px;
+  border-radius: 24px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--white-color);
+  border: none;
+  outline: none;
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
+}
+.form-btn:hover {
+  color: var(--white-color);
+  background-color: var(--main-hover);
+}
+
+.form-btn:focus,
+.register-btn:focus {
+  outline: none;
+}
+
+.register-btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main-color);
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
+}
+.register-btn:hover {
+  color: var(--main-hover);
+}
+
+.register-span {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--main-hover);
+}
+
+.form-number {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--main-color);
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.digit-group {
+  margin: 0 auto;
+  direction: ltr;
+  margin-bottom: 30px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.digit-group input {
+  width: 100%;
+  overflow: hidden;
+  max-width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  outline: none;
+  border: 1px solid rgba(28, 28, 28, 0.2);
+  background-color: #F9F9F9;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--main-hover);
+  border-radius: 7px;
+  transition: all 0.3s ease-in-out;
+}
+.digit-group input:focus {
+  border-color: var(--main-color);
+  outline: none;
 }/*# sourceMappingURL=main.css.map */
