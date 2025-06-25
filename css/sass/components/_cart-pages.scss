@@ -1,0 +1,128 @@
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 12px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+  }
+}
+.cart-item {
+  padding: 13px 20px;
+  background-color: $white;
+  border-radius: 7px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  text-align: center;
+  .form-btn {
+    height: 40px;
+  }
+}
+.cart-product-num {
+  font-weight: 400;
+  font-size: 12px;
+  color: #919191;
+}
+.cart-details-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 44px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cart-item {
+    margin-bottom: 14px;
+  }
+}
+.cart-title {
+  font-weight: 400;
+  font-size: 14px;
+  color: $hover;
+  margin-bottom: 10px;
+}
+.cart-box {
+  padding: 13px 20px;
+  background-color: $white;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+.cart-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  figure {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    @include flexCenter;
+  }
+  .product-name {
+    font-weight: 400;
+    font-size: 12px;
+    color: $hover;
+    margin-bottom: 10px;
+    max-width: 232px;
+  }
+}
+.product-desc {
+  font-weight: 300;
+  font-size: 12px;
+  color: $hover;
+  margin-bottom: 10px;
+}
+.product-weight {
+  font-weight: 400;
+  font-size: 12px;
+  color: #919191;
+  margin-bottom: 10px;
+}
+.product-detail-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  span {
+    font-weight: 600;
+    font-size: 14px;
+    color: $main;
+  }
+}
+.cart-btn-cont {
+  padding: 11px;
+  background-color: #61a7c61a;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  button {
+    background-color: transparent;
+    color: $hover;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    @include tr;
+    i {
+      color: $main;
+    }
+    &:hover {
+      color: $main;
+    }
+  }
+}
+.left-cart {
+  .product-total-box {
+    margin-top: 10px;
+  }
+  .total-price {
+    margin-bottom: 30px;
+  }
+}
