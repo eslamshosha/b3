@@ -145,7 +145,7 @@
       </div>
     </header>
     <div class="menu-bar">
-      <div>
+      <div class="product-container">
         <a href="#" class="active"
           ><i class="fa-solid fa-house"></i><span>الرئيسية</span></a
         >
@@ -182,6 +182,9 @@
                 </figure>
                 <span>صيدلية الدواء</span>
               </div>
+              <div class="cart-place">
+                شحن إلي : <span>الكويت ، الجابرية ، شارع الحسنية</span>
+              </div>
             </div>
             <h3 class="cart-title">المنتجات</h3>
             <div class="cart-box">
@@ -196,7 +199,7 @@
                   <div class="product-desc">500 مج - 90 حبة</div>
                   <div class="product-weight">الوزن : 0.17 جم</div>
                   <div class="product-detail-flex">
-                    <!-- select input here ya medoooooo -->
+                    <div class="product-weight">الكمية : 1</div>
                     <span>10 د.ك</span>
                   </div>
                 </div>
@@ -222,7 +225,7 @@
                   <div class="product-desc">500 مج - 90 حبة</div>
                   <div class="product-weight">الوزن : 0.17 جم</div>
                   <div class="product-detail-flex">
-                    <!-- select input here ya medoooooo -->
+                    <div class="product-weight">الكمية : 1</div>
                     <span>10 د.ك</span>
                   </div>
                 </div>
@@ -236,16 +239,156 @@
                 </button>
               </div>
             </div>
-          </div>
-          <div class="left-cart">
-            <h3 class="cart-title">عنوان التوصيل</h3>
+            <h3 class="cart-title">المنتجات</h3>
+            <div class="cart-weight">الوزن الاجمالي : 0.34 جم</div>
 
-            <div class="cart-box">
-              <!-- select input here ya medoooooo -->
+            <div class="checkout-cont">
+              <div class="payment-cont">
+                <div class="form-group">
+                  <div class="check-group">
+                    <div class="check-width">
+                      <label class="check-label">
+                        <span class="payment-radio">
+                          <input type="radio" name="place" />
+                          <div class="ship-cont">
+                            <figure>
+                              <img src="images/ship-img.png" alt="ship-logo" />
+                            </figure>
+                            <span class="check-text"
+                              ><span>1 يونيو - 5 يونيو</span>
+                              <span class="cart-ship"
+                                >3 د.ك <span>تكلفة الشحن</span></span
+                              ></span
+                            >
+                          </div>
+                          <span class="checkmark"></span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <span class="payment-radio">
+                          <input type="radio" name="place" />
+                          <div class="ship-cont">
+                            <figure>
+                              <img src="images/ship-img.png" alt="ship-logo" />
+                            </figure>
+                            <span class="check-text"
+                              ><span>1 يونيو - 5 يونيو</span>
+                              <span class="cart-ship"
+                                >3 د.ك <span>تكلفة الشحن</span></span
+                              ></span
+                            >
+                          </div>
+                          <span class="checkmark"></span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <span class="payment-radio">
+                          <input type="radio" name="place" />
+                          <div class="ship-cont">
+                            <figure>
+                              <img src="images/ship-img.png" alt="ship-logo" />
+                            </figure>
+                            <span class="check-text"
+                              ><span>1 يونيو - 5 يونيو</span>
+                              <span class="cart-ship"
+                                >3 د.ك <span>تكلفة الشحن</span></span
+                              ></span
+                            >
+                          </div>
+                          <span class="checkmark"></span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="left-cart">
+            <h3 class="cart-title">كوبون الخصم</h3>
+            <div class="discount-input">
+              <input type="text" placeholder="ادخل كوبون الخصم" name="" id="" />
+              <button>تطبيق</button>
+            </div>
+            <h3 class="cart-title">وسيلة الدفع</h3>
+            <div class="checkout-cont">
+              <div class="payment-cont">
+                <div class="form-group">
+                  <div class="check-group">
+                    <div class="check-width">
+                      <label class="check-label">
+                        <span class="payment-radio">
+                          <input type="radio" name="place" />
+                          <div class="ship-cont">
+                            <figure>
+                              <img
+                                src="images/pay-master.svg"
+                                alt="ship-logo"
+                              />
+                            </figure>
+                            <span class="check-text"
+                              ><span>1 فيزا / ماستر</span></span
+                            >
+                          </div>
+                          <span class="checkmark"></span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <span class="payment-radio">
+                          <input type="radio" name="place" />
+                          <div class="ship-cont">
+                            <figure>
+                              <img src="images/pay-apple.svg" alt="ship-logo" />
+                            </figure>
+                            <span class="check-text"><span>كي نت</span></span>
+                          </div>
+                          <span class="checkmark"></span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <span class="payment-radio">
+                          <input type="radio" name="place" />
+                          <div class="ship-cont">
+                            <figure>
+                              <img src="images/pay-apple.svg" alt="ship-logo" />
+                            </figure>
+                            <span class="check-text"><span>أبل باي</span></span>
+                          </div>
+                          <span class="checkmark"></span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="cart-title">ملخص الطلب</h3>
             <div class="product-total-box">
-              <h4 class="total-head">الاجمالي</h4>
-              <div class="total-price">10.00 د.ك</div>
+              <div class="total-ckeckout">
+                <span>مبلغ الطلب</span>
+                <span class="total-num">20.000 د.ك</span>
+              </div>
+              <div class="total-ckeckout">
+                <span>الشحن</span>
+                <span class="total-num">4.000 د.ك</span>
+              </div>
+              <div class="total-ckeckout red">
+                <span>الخصم</span>
+                <span class="total-num">1.000 د.ك</span>
+              </div>
+              <div class="total-ckeckout final">
+                <span>الاجمالي</span>
+                <span class="total-num">23.000 د.ك</span>
+              </div>
               <button class="btn-addToCart">تأكيد الطلب</button>
             </div>
           </div>
