@@ -136,6 +136,7 @@
     color: $hover;
     opacity: 1;
     padding: 0;
+    outline: none;
     &:hover {
       color: $main;
     }
@@ -284,4 +285,105 @@ html[dir="ltr"] .order-progress .step-icon::before {
   font-weight: 300;
   font-size: 12px;
   color: #979797;
+}
+.rate-btn {
+  font-weight: 500;
+  font-size: 12px;
+  color: $main;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  @include tr;
+  margin-inline-start: auto;
+  &:hover {
+    color: $hover;
+  }
+  i {
+    html[dir="ltr"] & {
+      transform: scaleX(-1);
+    }
+  }
+  @include min-992 {
+    position: absolute;
+    top: 15px;
+    inset-inline-end: 25px;
+  }
+}
+.rate-model {
+  background-color: #f1f1f0;
+  border-radius: 7px;
+  padding: 30px 17px;
+  max-width: 350px;
+  margin: 30px auto;
+  .btn-close {
+    position: absolute;
+    top: 5px;
+    inset-inline-end: 15px;
+    font-size: 14px;
+    color: $hover;
+    opacity: 1;
+    padding: 0;
+    outline: none;
+    &:hover {
+      color: $main;
+    }
+  }
+  .modal-content {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+  }
+  .model-title {
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+textarea.form-input {
+  height: 100px;
+  border: 0.5px solid #1c1c1c33;
+  border-radius: 10px;
+  text-align: start;
+  padding: 20px;
+}
+
+.rating {
+  margin-bottom: 25px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.rating > label {
+  color: #a0a3ad;
+}
+
+.rating > label:before {
+  font-size: 40px;
+  font-family: "Font Awesome 6 Pro";
+  content: "\f005";
+  display: inline-block;
+  font-weight: 800;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #fece31;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #f79426;
 }
