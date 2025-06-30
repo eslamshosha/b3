@@ -86,6 +86,9 @@
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 10px;
+  .product-weight {
+    margin-bottom: 0;
+  }
   span {
     font-weight: 600;
     font-size: 14px;
@@ -186,18 +189,18 @@
     font-size: 14px;
     color: $hover;
   }
-  .cart-ship {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 16px;
-    color: $main;
-    font-weight: 600;
-    span {
-      font-size: 10px;
-      font-weight: 300;
-      color: #919191;
-    }
+}
+.cart-ship {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 16px;
+  color: $main;
+  font-weight: 600;
+  span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #919191;
   }
 }
 .ship-cont {

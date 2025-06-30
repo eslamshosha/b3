@@ -2612,6 +2612,9 @@ html[dir=ltr] .rate-more i {
   gap: 10px;
   margin-bottom: 10px;
 }
+.product-detail-flex .product-weight {
+  margin-bottom: 0;
+}
 .product-detail-flex span {
   font-weight: 600;
   font-size: 14px;
@@ -2714,7 +2717,8 @@ html[dir=ltr] .rate-more i {
   font-size: 14px;
   color: var(--main-hover);
 }
-.payment-cont .cart-ship {
+
+.cart-ship {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -2722,7 +2726,7 @@ html[dir=ltr] .rate-more i {
   color: var(--main-color);
   font-weight: 600;
 }
-.payment-cont .cart-ship span {
+.cart-ship span {
   font-size: 10px;
   font-weight: 300;
   color: #919191;
@@ -2809,4 +2813,285 @@ html[dir=ltr] .rate-more i {
 .total-ckeckout.final .total-num {
   font-weight: 600;
   font-size: 22px;
+}
+
+/*account section*/
+.account-cont {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 22px;
+}
+@media only screen and (max-width: 991px) {
+  .account-cont {
+    grid-template-columns: 1fr;
+  }
+}
+
+.account-sidebar {
+  width: 100%;
+  background-color: var(--white-color);
+  border-radius: 7px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.account-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.account-ancor {
+  padding: 15px 20px;
+  position: relative;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--main-hover);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  background-color: transparent;
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
+}
+.account-ancor i {
+  font-size: 12px;
+  width: 12px;
+}
+html[dir=ltr] .account-ancor i {
+  transform: scaleX(-1);
+}
+.account-ancor.active, .account-ancor:hover {
+  color: var(--main-color);
+  background-color: #f2f4ff;
+}
+.account-ancor.out {
+  font-weight: 400;
+  color: #d72238;
+}
+.account-ancor.out:hover {
+  background-color: rgba(215, 34, 56, 0.1);
+}
+
+.account-content {
+  width: 100%;
+}
+
+.order-item {
+  width: 100%;
+  display: block;
+  background-color: var(--white-color);
+  width: 100%;
+  padding: 13px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+}
+.order-item .product-by {
+  font-size: 14px;
+  color: var(--main-hover);
+  margin: 0;
+  width: auto;
+  padding: 0;
+  background-color: transparent;
+}
+
+.order-item-cont {
+  background-color: rgba(97, 167, 198, 0.1);
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #979797;
+  margin-bottom: 20px;
+}
+
+.order-item-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--main-hover);
+  margin-bottom: 15px;
+}
+.order-item-details .order-id {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.order-item-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--main-hover);
+}
+.order-item-total .order-total {
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.track-model {
+  padding: 24px 20px;
+  background-color: #f9f9f9;
+  border-radius: 7px;
+  max-width: 706px;
+  position: relative;
+}
+.track-model .modal-content {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.track-model .btn-close {
+  position: absolute;
+  top: 5px;
+  inset-inline-end: 15px;
+  font-size: 14px;
+  color: var(--main-hover);
+  opacity: 1;
+  padding: 0;
+}
+.track-model .btn-close:hover {
+  color: var(--main-color);
+}
+
+.model-title {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: var(--main-hover);
+  margin-bottom: 35px;
+}
+
+.order-progress {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 33px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .order-progress {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.order-progress .order-step {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.order-progress .order-step:nth-of-type(1) {
+  z-index: 4;
+}
+.order-progress .order-step:nth-of-type(2) {
+  z-index: 3;
+}
+.order-progress .order-step:nth-of-type(3) {
+  z-index: 2;
+}
+.order-progress .order-step:nth-of-type(4) {
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .order-progress .order-step {
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+}
+.order-progress .order-step:first-of-type .step-icon::before {
+  display: none;
+}
+
+.order-progress .order-step.done .step-icon {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+.order-progress .order-step.done .step-icon::before {
+  background-color: var(--main-color);
+}
+
+.order-progress .step-icon {
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  background-color: #979797;
+  font-size: 10px;
+  color: #979797;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.order-progress .step-icon i {
+  transform: rotate(20deg);
+}
+
+.order-progress .step-icon::before {
+  height: 5px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  background-color: #979797;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+html[dir=rtl] .order-progress .step-icon::before {
+  left: 0;
+}
+
+html[dir=ltr] .order-progress .step-icon::before {
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .order-progress .step-icon::before {
+    width: 5px;
+    height: 40px;
+    top: auto;
+    bottom: 100%;
+  }
+  html[dir=rtl] .order-progress .step-icon::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  html[dir=ltr] .order-progress .step-icon::before {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+.order-progress .step-name {
+  font-weight: 500;
+  font-size: 12px;
+  color: #979797;
+}
+
+.order-progress .done .step-name {
+  color: var(--main-color);
+}
+
+.order-progress .step-time {
+  font-weight: 300;
+  font-size: 12px;
+  color: #979797;
 }/*# sourceMappingURL=main.css.map */

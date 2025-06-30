@@ -1,0 +1,287 @@
+/*account section*/
+.account-cont {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 22px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+  }
+}
+.account-sidebar {
+  width: 100%;
+  background-color: $white;
+  border-radius: 7px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.account-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+// .account-list li {
+//   padding: 15px 20px;
+// }
+// .account-list li:last-of-type {
+//   border-bottom: none;
+// }
+.account-ancor {
+  padding: 15px 20px;
+  position: relative;
+  font-weight: 300;
+  font-size: 14px;
+  color: $hover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  background-color: transparent;
+  text-decoration: none !important;
+  transition: all 0.3s ease-in-out;
+
+  i {
+    font-size: 12px;
+    width: 12px;
+    html[dir="ltr"] & {
+      transform: scaleX(-1);
+    }
+  }
+  &.active,
+  &:hover {
+    color: $main;
+    background-color: #f2f4ff;
+  }
+  &.out {
+    font-weight: 400;
+    color: #d72238;
+    &:hover {
+      background-color: rgba(215, 34, 56, 0.1);
+    }
+  }
+}
+.account-content {
+  width: 100%;
+}
+.order-item {
+  width: 100%;
+  display: block;
+  background-color: $white;
+  width: 100%;
+  padding: 13px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  .product-by {
+    font-size: 14px;
+    color: $hover;
+    margin: 0;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+.order-item-cont {
+  background-color: rgba(97, 167, 198, 0.1);
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #979797;
+  margin-bottom: 20px;
+}
+.order-item-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 300;
+  font-size: 14px;
+  color: $hover;
+  margin-bottom: 15px;
+  .order-id {
+    font-weight: 400;
+    font-size: 22px;
+  }
+}
+.order-item-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 18px;
+  color: $hover;
+  .order-total {
+    color: $main;
+    font-weight: 600;
+    font-size: 22px;
+  }
+}
+.track-model {
+  padding: 24px 20px;
+  background-color: #f9f9f9;
+  border-radius: 7px;
+  max-width: 706px;
+  position: relative;
+  .modal-content {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .btn-close {
+    position: absolute;
+    top: 5px;
+    inset-inline-end: 15px;
+    font-size: 14px;
+    color: $hover;
+    opacity: 1;
+    padding: 0;
+    &:hover {
+      color: $main;
+    }
+  }
+}
+.model-title {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: $hover;
+  margin-bottom: 35px;
+}
+.order-progress {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 33px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .order-progress {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.order-progress .order-step {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+  // flex-grow: 1;
+  gap: 10px;
+  &:nth-of-type(1) {
+    z-index: 4;
+  }
+  &:nth-of-type(2) {
+    z-index: 3;
+  }
+  &:nth-of-type(3) {
+    z-index: 2;
+  }
+  &:nth-of-type(4) {
+    z-index: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .order-progress .order-step {
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+}
+
+.order-progress .order-step:first-of-type .step-icon::before {
+  display: none;
+}
+
+.order-progress .order-step.done .step-icon {
+  background-color: $main;
+  color: $white;
+}
+
+.order-progress .order-step.done .step-icon::before {
+  background-color: $main;
+}
+
+.order-progress .step-icon {
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  background-color: #979797;
+  font-size: 10px;
+  color: #979797;
+  @include flexCenter;
+  position: relative;
+  @include tr;
+  i {
+    transform: rotate(20deg);
+  }
+}
+
+.order-progress .step-icon::before {
+  height: 5px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  background-color: #979797;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+html[dir="rtl"] .order-progress .step-icon::before {
+  left: 0;
+}
+
+html[dir="ltr"] .order-progress .step-icon::before {
+  right: 0;
+}
+
+// @media (max-width: 1199px) {
+//   .order-progress .step-icon::before {
+//     width: 300px;
+//   }
+// }
+
+@media (max-width: 767px) {
+  .order-progress .step-icon::before {
+    width: 5px;
+    height: 40px;
+    top: auto;
+    bottom: 100%;
+  }
+
+  html[dir="rtl"] .order-progress .step-icon::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  html[dir="ltr"] .order-progress .step-icon::before {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+}
+
+.order-progress .step-name {
+  font-weight: 500;
+  font-size: 12px;
+  color: #979797;
+}
+.order-progress .done .step-name {
+  color: $main;
+}
+.order-progress .step-time {
+  font-weight: 300;
+  font-size: 12px;
+  color: #979797;
+}
