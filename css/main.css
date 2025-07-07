@@ -3200,4 +3200,150 @@ textarea.form-input {
 .rating > label:hover ~ input:checked ~ label,
 .rating > input:checked ~ label:hover ~ label {
   color: #f79426;
+}
+
+.profile-form,
+.address-edit-cont {
+  background-color: var(--white-color);
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 557px;
+  overflow: hidden;
+}
+.profile-form .form-input,
+.address-edit-cont .form-input {
+  padding: 0 20px;
+}
+.profile-form .form-btn-cont,
+.address-edit-cont .form-btn-cont {
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+.profile-form .form-btn,
+.address-edit-cont .form-btn {
+  max-width: 207px;
+}
+
+.address-edit-cont {
+  max-width: 580px;
+}
+
+.add-ancor {
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.address-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .address-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.address-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+.address-desc {
+  font-weight: 300;
+  font-size: 14px;
+  color: #353535;
+}
+
+.address-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+@media only screen and (max-width: 767px) {
+  .address-control {
+    width: 100%;
+  }
+}
+.address-control a,
+.address-control button,
+.address-control .address-edit,
+.address-control .address-delete {
+  height: 40px;
+  width: 124px;
+  font-weight: 300;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.address-edit {
+  color: var(--main-color);
+  background-color: #f2f4ff;
+}
+.address-edit:hover {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+.address-delete {
+  color: #d72238;
+  background-color: rgba(255, 102, 120, 0.2);
+}
+.address-delete:hover {
+  background-color: #ff6678;
+  color: var(--white-color);
+}
+
+.address-setting {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media only screen and (max-width: 991px) {
+  .address-setting {
+    grid-template-columns: 1fr;
+  }
+}
+.address-setting .form-group {
+  margin-bottom: 0;
+}
+html[dir=rtl] .address-setting .form-group input[type=number] {
+  direction: rtl;
+}
+
+.full-grid {
+  grid-column: 1/-1;
+}
+
+.location-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-end: 20px;
+}
+
+.account-cont .items-grid {
+  padding-top: 0;
 }/*# sourceMappingURL=main.css.map */
