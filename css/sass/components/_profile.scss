@@ -164,6 +164,10 @@
   }
   textarea.form-input {
     padding: 10px 20px;
+    border: 2px solid transparent;
+    &:focus{
+      border-color: $main;
+    }
   }
   .form-btn-cont {
     margin-bottom: 20px;

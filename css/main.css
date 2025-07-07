@@ -3391,6 +3391,10 @@ html[dir=rtl] .address-setting .form-group input[type=number] {
 }
 .contact-container textarea.form-input {
   padding: 10px 20px;
+  border: 2px solid transparent;
+}
+.contact-container textarea.form-input:focus {
+  border-color: var(--main-color);
 }
 .contact-container .form-btn-cont {
   margin-bottom: 20px;
