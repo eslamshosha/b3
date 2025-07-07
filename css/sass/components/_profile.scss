@@ -126,3 +126,95 @@
     padding-top: 0;
   }
 }
+.content-container {
+  text-align: center;
+  padding-bottom: 40px;
+  img {
+    margin-bottom: 20px;
+  }
+}
+.content-title {
+  font-weight: 400;
+  font-size: 24px;
+  color: $hover;
+  margin-bottom: 20px;
+}
+.content-pargh {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #292929;
+  margin-bottom: 0;
+}
+.contact-pargh {
+  font-weight: 600;
+  font-size: 18px;
+  color: $main;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.contact-container {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 25px 20px;
+  max-width: 530px;
+  margin: 0 auto;
+  .form-input {
+    padding: 0 20px;
+  }
+  textarea.form-input {
+    padding: 10px 20px;
+  }
+  .form-btn-cont {
+    margin-bottom: 20px;
+  }
+}
+.form-label {
+  font-weight: 400;
+  font-size: 14px;
+  color: #292929;
+  margin-bottom: 10px;
+}
+input[type="email"].form-input::placeholder {
+  text-align: right;
+}
+.contact-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  color: #878787;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 8px;
+  &::after,
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #878787;
+  }
+}
+.contact-ancor {
+  @include flexCenter;
+  gap: 7px;
+  color: $main;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  height: 48px;
+  width: 100%;
+  @include tr;
+  &:hover {
+    background-color: $main;
+    color: $white;
+    img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(3%)
+        saturate(7488%) hue-rotate(322deg) brightness(120%) contrast(101%);
+    }
+  }
+}

@@ -3346,4 +3346,109 @@ html[dir=rtl] .address-setting .form-group input[type=number] {
 
 .account-cont .items-grid {
   padding-top: 0;
+}
+
+.content-container {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.content-container img {
+  margin-bottom: 20px;
+}
+
+.content-title {
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--main-hover);
+  margin-bottom: 20px;
+}
+
+.content-pargh {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #292929;
+  margin-bottom: 0;
+}
+
+.contact-pargh {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--main-color);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.contact-container {
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 25px 20px;
+  max-width: 530px;
+  margin: 0 auto;
+}
+.contact-container .form-input {
+  padding: 0 20px;
+}
+.contact-container textarea.form-input {
+  padding: 10px 20px;
+}
+.contact-container .form-btn-cont {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: 400;
+  font-size: 14px;
+  color: #292929;
+  margin-bottom: 10px;
+}
+
+input[type=email].form-input::-moz-placeholder {
+  text-align: right;
+}
+
+input[type=email].form-input::placeholder {
+  text-align: right;
+}
+
+.contact-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  color: #878787;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 8px;
+}
+.contact-text::after, .contact-text::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #878787;
+}
+
+.contact-ancor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  height: 48px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.contact-ancor:hover {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+.contact-ancor:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(7488%) hue-rotate(322deg) brightness(120%) contrast(101%);
 }/*# sourceMappingURL=main.css.map */
